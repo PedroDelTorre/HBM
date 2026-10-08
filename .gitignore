@@ -1,0 +1,107 @@
+# ================= Gradle & Build Artifacts =================
+# Эти файлы создаются при сборке и не должны быть в репозитории.
+/build/
+/.gradle/
+/run/
+/run-data/
+
+# ================= IDE Specific =================
+# Файлы настроек для разных сред разработки.
+# Они специфичны для каждого пользователя и не должны быть общими.
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Visual Studio Code
+.vscode/
+.cursor
+.cursorignore
+.zcode
+.roo
+.rooignore
+# ================= Generated Files =================
+src/generated/resources/.cache
+src/generated/resources/assets/hbm_m/blockstates/
+src/generated/resources/assets/hbm_m/models/
+src/generated/resources/data/
+AGENTS.md
+*.diff
+/plans
+/plans
+.cursorignore
+build-logic/build
+build-logic/.gradle
+build-logic/build
+versions/1.20.1-fabric/build
+versions/1.20.1-fabric/.gradle
+versions/1.20.1-fabric/run
+versions/1.21.1-fabric/.eclipse
+versions/1.20.1-forge/build
+versions/1.20.1-forge/.gradle
+versions/1.20.1-forge/run
+versions/1.20.1-forge/.eclipse
+versions/1.21.1-fabric/build
+versions/1.21.1-fabric/.gradle
+versions/1.21.1-fabric/run
+versions/1.21.1-fabric/.eclipse
+versions/1.21.1-neoforge/build
+versions/1.21.1-neoforge/.gradle
+versions/1.21.1-neoforge/run
+versions/1.21.1-neoforge/.eclipse
+versions/1.21.11-neoforge/build
+versions/1.21.11-neoforge/.gradle
+versions/1.21.11-neoforge/run
+versions/1.21.11-neoforge/.eclipse
+versions/1.21.11-fabric/build
+versions/1.21.11-fabric/.gradle
+versions/1.21.11-fabric/run
+versions/1.21.11-fabric/.eclipse
+versions/datagen/
+legacy/forgegradle/.gradle
+legacy/forgegradle/build
+
+# ================= Logs & Temporary Files =================
+# Логи, дампы ошибок и временные файлы.
+*.log
+hs_err_pid*
+replay_pid*
+temp/
+logs/
+/ExampleProject/
+/OLD/
+agent
+ideas
+libs/
+design.md
+# ================= OS Specific =================
+# Системные файлы, которые могут случайно появиться.
+.DS_Store
+Thumbs.db
+.kilocode
+
+# ================= Minecraft/Forge Specific =================
+# Файлы, генерируемые средой разработки Forge.
+natives/
+*.srg
+*.tsrg
+forge*changelog.txt
+.fake
+.editorconfig
+.github/copilot-instructions.md
+.gitignore
+.cursor/
+desktop.ini
+HBM-Modernized.code-workspace
+java_pid*
+AGENTS.md
+libs/

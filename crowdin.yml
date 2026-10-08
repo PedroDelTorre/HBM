@@ -1,0 +1,30 @@
+preserve_hierarchy: true
+
+# Конфиг Crowdin для HBM-Modernized.
+# Project ID и токен передаются экшеном через env (см. .github/workflows/crowdin.yml).
+#
+# Источник (en_us) берётся из generated-resources (его пишет датаген).
+# Переводы кладём в main/resources — туда датаген не пишет и не чистит,
+# поэтому Crowdin-файлы не затираются при перегенерации.
+# Обе папки попадают в финальный JAR.
+
+files:
+  - source: /src/generated/resources/assets/hbm_m/lang/en_us.json
+    # %locale_with_underscore% выдаёт код вида ru_ru, zh_cn, pt_br —
+    # ровно тот формат, который требует Minecraft (language_country).
+    # Скачаются только те языки, которые включены в Target Languages
+    # проекта на Crowdin (Project Settings → Languages → Target Languages).
+    translation: /src/main/resources/assets/hbm_m/lang/%locale_with_underscore%.json
+
+    # Язык-источник — английский. Без явного указания Crowdin может попытаться
+    # скачать перевод на en и положить en_us.json в папку переводов (конфликт с source).
+    source_language: en
+
+    # Файлы, которые Crowdin НЕ должен перезаписывать при download:
+    #   en_us.json — это сам источник.
+    #   ru_ru.json — генерируется датагеном (провайдер ru_ru), неуправляемый Crowdin-ом.
+    # Если хочешь, чтобы Crowdin ТОЖЕ управлял русским — удали строку ru_ru.json ниже,
+    # а датаген-провайдер ru_ru убери (иначе будут конфликты при перегенерации).
+    ignore:
+      - /src/main/resources/assets/hbm_m/lang/en_us.json
+      - /src/main/resources/assets/hbm_m/lang/ru_ru.json
